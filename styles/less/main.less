@@ -1,0 +1,67 @@
+@import 'includes/brand.less';
+@import 'includes/typography.less';
+@import 'includes/mixins.less';
+
+* {
+  .box-sizing;
+}
+
+nav#mainNav {
+  @navbg: lighten(@dark, 10%);
+  position: fixed;
+  padding: 15px 0px;
+  width: 100%;
+  background: fadeout(@navbg, 10%);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: @headingsfont;
+  ul {
+    margin: 0 auto;
+    width: 50%;
+    li {
+      display: inline-block;
+      padding: 0px 6%;
+    }
+  }
+}
+
+header#mainHeader {
+  background-image: url('../images/pics/restaurant-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  .logo {
+    margin: 0 auto 50px;
+    width: 250px;
+    height: 187px;
+  }
+  h1.headline {
+    margin: 0 auto 50px;
+    width: 50%;
+    font-size: 3.3em;
+    line-height: 1.3em;
+  }
+}
+
+#donnaLogo {
+  height: 350px;
+  width: 350px;
+}
+
+
+
+
+
+body {
+  background-color: grey;
+  font-family: @bodyfont;
+  font-size: 1em;
+  color: #fff;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
