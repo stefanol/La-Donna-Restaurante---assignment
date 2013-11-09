@@ -41,11 +41,12 @@ h4 {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+/******GLOBAL STYLES*******/
 nav#mainNav {
   position: fixed;
   padding: 15px 0px;
   width: 100%;
-  background: rgba(154, 154, 154, 0.9);
+  background: rgba(179, 179, 179, 0.9);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -59,20 +60,23 @@ nav#mainNav ul li {
   display: inline-block;
   padding: 0px 6%;
 }
+/************************/
+/******HOME PAGE*********/
 header#mainHeader {
   background-image: url('../images/pics/restaurant-bg.jpg');
   background-size: cover;
   background-position: center;
+  /*.logo {
+    margin: 0 auto 50px;
+    width: 250px;
+    height: 187px;
+  }*/
+
 }
-header#mainHeader .logo {
-  margin: 0 auto 50px;
-  width: 250px;
-  height: 187px;
-}
-header#mainHeader h1.headline {
-  margin: 0 auto 50px;
-  width: 50%;
-  font-size: 3.3em;
+header#mainHeader h1 {
+  margin: 50px auto 50px;
+  width: 75%;
+  font-size: 2em;
   line-height: 1.3em;
 }
 #donnaLogo {
@@ -85,9 +89,209 @@ body {
   font-size: 1em;
   color: #fff;
 }
+section#about {
+  background: #330303;
+  color: #aaaaaa;
+  padding-top: 10px;
+}
+section#about .content {
+  padding-top: 20px;
+  float: left;
+  display: inline-block;
+  width: 45%;
+  margin: 0 2.475%;
+}
+section#about .content h2 {
+  padding-bottom: 5px;
+}
 .container {
   width: 960px;
   margin: 0 auto;
   overflow: hidden;
   text-align: center;
 }
+/*****************/
+/*******MENU******/
+section#soupMenu h2 {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 65px;
+}
+section#pastaMenu h2 {
+  font-size: 30px;
+  text-align: center;
+}
+section ul {
+  padding: 35px;
+}
+section#pizzaMenu h2 {
+  font-size: 30px;
+  text-align: center;
+  clear: both;
+  padding-top: 20px;
+}
+/*section#pastaMenu {
+  background: #fff;
+  color: @dark;
+  ul li {
+    .widthfloat(20%);
+    margin-bottom: 7%;
+  }
+}
+
+section#pizzaMenu {
+  background: #fff;
+  color: @dark;
+  ul li {
+    .widthfloat(20%);
+    margin-bottom: 7%;
+  }
+}*/
+/*********************SOUPS*********************/
+.frenchOnion {
+  background-image: url('../images/pics/soup/frenchOnion.jpg');
+  height: 300px;
+  width: 300px;
+  float: left;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+.frenchOnion:hover {
+  opacity: 1.0;
+}
+.italWed {
+  background-image: url('../images/pics/soup/italWed.jpg');
+  height: 300px;
+  width: 300px;
+  float: left;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+.italWed:hover {
+  opacity: 1.0;
+}
+.minestrone {
+  background-image: url('../images/pics/soup/minestrone.jpg');
+  height: 300px;
+  width: 300px;
+  float: left;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+.minestrone:hover {
+  opacity: 1.0;
+}
+.broccoli {
+  background-image: url('../images/pics/soup/broccoli.jpg');
+  height: 300px;
+  width: 300px;
+  float: left;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+.broccoli:hover {
+  opacity: 1.0;
+}
+/********************PASTA**********************/
+.alfredo {
+  background-image: url('../images/pics/pasta/fetAlf.jpg');
+  height: 300px;
+  width: 300px;
+  float: left;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+.alfredo:hover {
+  opacity: 1.0;
+}
+.penneVodka {
+  background-image: url('../images/pics/pasta/penneVodka.jpg');
+  height: 300px;
+  width: 300px;
+  float: left;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+.penneVodka:hover {
+  opacity: 1.0;
+}
+.lasagna {
+  background-image: url('../images/pics/pasta/lasagna.jpg');
+  height: 300px;
+  width: 300px;
+  float: left;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+.lasagna:hover {
+  opacity: 1.0;
+}
+.cannelloni {
+  background-image: url('../images/pics/pasta/cannelloni.jpg');
+  height: 300px;
+  width: 300px;
+  float: left;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+.cannelloni:hover {
+  opacity: 1.0;
+}
+/***********************/
+/*******PIZZA*******/
+.fourCheese {
+  background-image: url('../images/pics/pizza/4chSpin.jpg');
+  height: 300px;
+  width: 300px;
+  float: left;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+.fourCheese:hover {
+  opacity: 1.0;
+}
+.margherita {
+  background-image: url('../images/pics/pizza/margPizza.jpg');
+  height: 300px;
+  width: 300px;
+  float: left;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+.margherita:hover {
+  opacity: 1.0;
+}
+.meatLovers {
+  background-image: url('../images/pics/pizza/meatLovers.jpg');
+  height: 300px;
+  width: 300px;
+  float: left;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+.meatLovers:hover {
+  opacity: 1.0;
+}
+.vegetarian {
+  background-image: url('../images/pics/pizza/vegePizza.jpg');
+  height: 300px;
+  width: 300px;
+  float: left;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+.vegetarian:hover {
+  opacity: 1.0;
+}
+.imgText {
+  text-align: center;
+  margin: 0;
+  padding: 25px 0 0 0;
+  color: #ffffff;
+}
+section#pastaMenu ul li {
+  display: inline-block;
+}
+/*********************************/
+/*************CONTACT*************/
+/**************/
