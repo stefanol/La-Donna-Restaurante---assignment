@@ -8,10 +8,24 @@
   <link rel="shortcut icon" href="images/favicon.png"> 
   <link rel="apple-itouch-icon" href="images/favicon.png">
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
     <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/reset.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="styles/main.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="styles/print.css" type="text/css" media="print" >
+
+    <script>
+
+  $(document).ready(function(){
+    $(".menuBtn").click(function(){
+      $("nav").slideToggle();
+    });
+
+  });
+
+  </script>
+
 
 </head>
 <body>
@@ -21,7 +35,7 @@
 <!--Nav-->
 	<nav id="mainNav">
 		<ul>
-			<li><a href="index.html">Home</a></li>
+			<a href="index.html"><li>Home</li></a>
 			<li><a href="menu.html">Menu</a></li>
 			<li><a href="contact.html">Contact</a></li>
 		</ul>
@@ -30,10 +44,11 @@
 	<!--Header-->
 	<header id="mainHeader">
 		<div class="container">
-			<h1 class="tagline">The Best Italian Eatery Around!</h1>
-			<p>Come visit us in Little Italy, Downtown Toronto!</p>
+			<div class="menuBtn"><img src="images/menu.svg"></div>
 			<img id="donnaLogo" src="images/logos/laDonnaLogo.png">
-			</div>
+			<h1 class="tagline">The Best Italian Eatery Around!</h1>
+			<!-- <p>Come visit us in Little Italy, Downtown Toronto!</p> -->
+		</div>
 	</header>
 
 	<!--About-->
@@ -42,13 +57,13 @@
 			<h1>Our Company</h1>
 			<div class="content">
 				<h2>Spacious Eatery</h2>
-				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum.</p>
+				<p>With our spacious and elegant area, La Donna Ristorante meets all of your needs. You will find yourself enjoying your meal in true italian style. Our seating area includes numerous booths, tables and a bar for your enjoyment. There is also a patio area, facing the heart of Little Italy, if you wish to sit outside and enjoy lifestyle. You will feel as if you stepped right into Italy! Come down to Little Italy, Toronto today!</p>
 			</div>
 
 			
 			<div class="content">
 			<h2>Our Food</h2>
-				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum.</p>
+				<p>Our over traditional italian menu items are made fresh in the restaurant the moment you order. We don't fool around with true italian food. Every bite is a step into another world. Our chefs are top of the line cooks who make our food have a distinct taste. We have something on our menu for everyone, so why not come in and have a true taste of Italy!</p>
 	</section>
 
 

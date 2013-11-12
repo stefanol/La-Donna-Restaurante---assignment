@@ -7,24 +7,41 @@
 }
 
 /******GLOBAL STYLES*******/
+
+body {
+  background-color: @red;
+}
+
 nav#mainNav {
-  @navbg: darken(@dark, 30%);
-  position: fixed;
+  @navbg: lighten(@red, 10%);
+  background: fadeout(@navbg, 10%);
+  /*position: fixed;*/
   padding: 15px 0px;
   width: 100%;
-  background: fadeout(@navbg, 10%);
-  text-align: center;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 0.2em;
   font-family: @headingsfont;
+  z-index: 9999; /*****THANKS!!!******/
   ul {
     margin: 0 auto;
     width: 50%;
     li {
       display: inline-block;
       padding: 0px 6%;
+      a:hover {
+        color: @grey;
+      }
     }
   }
+}
+
+.menuBtn {
+  display: none;
+}
+
+footer {
+  padding: 10px;
 }
 
 /************************/
@@ -34,22 +51,21 @@ header#mainHeader {
   background-image: url('../images/pics/restaurant-bg.jpg');
   background-size: cover;
   background-position: center;
-  /*.logo {
-    margin: 0 auto 50px;
-    width: 250px;
-    height: 187px;
-  }*/
+  opacity: 0.9;
+  #donnaLogo {
+    margin-bottom: -40px;
+    height: 350px;
+    width: 350px;
+    float: left;
+  }
   h1 {
-    margin: 50px auto 50px;
+    margin: 0 0 30px -20px;
+    float: left;
     width: 75%;
     font-size: 2em;
     line-height: 1.3em;
+    color: @grey;
   }
-}
-
-#donnaLogo {
-  height: 350px;
-  width: 350px;
 }
 
 body {
@@ -61,7 +77,7 @@ body {
 
 section#about {
   background: @red;
-  color: #aaaaaa;
+  color: @grey;
   padding-top: 10px;
   .content {
   padding-top: 20px; 
@@ -71,7 +87,6 @@ section#about {
     }
   }
 }
-
 
 .container {
   width: 960px;
@@ -109,25 +124,6 @@ section#pizzaMenu {
     padding-top: 20px;
   }
 }
-
-
-/*section#pastaMenu {
-  background: #fff;
-  color: @dark;
-  ul li {
-    .widthfloat(20%);
-    margin-bottom: 7%;
-  }
-}
-
-section#pizzaMenu {
-  background: #fff;
-  color: @dark;
-  ul li {
-    .widthfloat(20%);
-    margin-bottom: 7%;
-  }
-}*/
 /*********************SOUPS*********************/
 
 .frenchOnion {
@@ -296,8 +292,14 @@ section#pizzaMenu {
 .imgText {
   text-align: center;
   margin: 0;
-  padding: 25px 0 0 0;
-  color: @dark;
+  padding: 0 auto;
+  color: @red;
+  width: 100%;
+}
+
+.backSpan {
+  opacity: 0.8;
+  background-color: white;
 }
 
 section#pastaMenu {
@@ -314,4 +316,153 @@ section#pastaMenu {
 
 
 
+form {
+  background: @grey;
+  margin: 70px 0 0 350px;
+  height: 500px;
+  width: 600px;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.25em;
+  line-height: 24px;
+  font-weight: bold;
+  color: #09C;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  margin-bottom: 50px;
+  h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: @red;
+  }
+}
+
+span.input {
+  font-size: 1.563em;
+  margin-top: 60px;
+  margin-bottom: -25px;
+  display: block;
+  color: @red;
+}
+
+#name {
+  width: 300px;
+  float: right;
+}
+
+#email {
+  float: right;
+  width: 300px;
+}
+
+#subject {
+  float: right;
+  width: 300px;
+}
+
+#feedback {
+  float: right;
+  width: 300px;
+}
+
+#submit {
+  margin: 40px 0 0 235px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  background-color: @grey;
+  height: 100px;
+  width: 100px;
+}
+
 /**************/
+
+/*********MEDIA QUERIES*********/
+
+@media screen and (min-width: 768px) {
+
+
+
+}
+
+@media screen and (max-width: 480px) {
+  
+  .container {
+    max-width: 95%;
+  }
+
+  header {
+    .menuBtn {
+      .boxmodel(100%);
+      height: 32px;
+      text-align: center;
+    }
+    nav {
+      .boxmodel(100%);
+      display: none;
+      ul {
+        padding: 5px 0;
+        &:hover li {
+          display: block;
+        }
+        li {
+          display: block;
+          padding: 0;
+          width: 20px;
+        }
+        a {
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+
+  header#mainHeader {
+  h1 {
+    margin: 0 0 0 50px;
+    float: left;
+    width: 75%;
+    font-size: 2em;
+    line-height: 1.3em;
+    color: @grey;
+  }
+}
+
+
+  section#about {
+    .content {
+      .widthfloat(90%);
+    }
+  }
+
+
+  form {
+    margin: 70px 0 0 20px;
+    height: 500px;
+    width: 350px;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.25em;
+    line-height: 24px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 50px;
+    text-align: center;
+    h1 {
+      text-align: center;
+      text-decoration: none;
+      color: @red;
+    }
+  }
+}
+
+
+
+
+

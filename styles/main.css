@@ -42,15 +42,22 @@ h4 {
   box-sizing: border-box;
 }
 /******GLOBAL STYLES*******/
+body {
+  background-color: #330303;
+}
 nav#mainNav {
-  position: fixed;
+  background: rgba(99, 6, 6, 0.9);
+  /*position: fixed;*/
+
   padding: 15px 0px;
   width: 100%;
-  background: rgba(179, 179, 179, 0.9);
-  text-align: center;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 0.2em;
   font-family: Ariel;
+  z-index: 9999;
+  /*****THANKS!!!******/
+
 }
 nav#mainNav ul {
   margin: 0 auto;
@@ -60,28 +67,36 @@ nav#mainNav ul li {
   display: inline-block;
   padding: 0px 6%;
 }
+nav#mainNav ul li a:hover {
+  color: #aaaaaa;
+}
+.menuBtn {
+  display: none;
+}
+footer {
+  padding: 10px;
+}
 /************************/
 /******HOME PAGE*********/
 header#mainHeader {
   background-image: url('../images/pics/restaurant-bg.jpg');
   background-size: cover;
   background-position: center;
-  /*.logo {
-    margin: 0 auto 50px;
-    width: 250px;
-    height: 187px;
-  }*/
-
+  opacity: 0.9;
+}
+header#mainHeader #donnaLogo {
+  margin-bottom: -40px;
+  height: 350px;
+  width: 350px;
+  float: left;
 }
 header#mainHeader h1 {
-  margin: 50px auto 50px;
+  margin: 0 0 30px -20px;
+  float: left;
   width: 75%;
   font-size: 2em;
   line-height: 1.3em;
-}
-#donnaLogo {
-  height: 350px;
-  width: 350px;
+  color: #aaaaaa;
 }
 body {
   background-color: grey;
@@ -130,23 +145,6 @@ section#pizzaMenu h2 {
   clear: both;
   padding-top: 20px;
 }
-/*section#pastaMenu {
-  background: #fff;
-  color: @dark;
-  ul li {
-    .widthfloat(20%);
-    margin-bottom: 7%;
-  }
-}
-
-section#pizzaMenu {
-  background: #fff;
-  color: @dark;
-  ul li {
-    .widthfloat(20%);
-    margin-bottom: 7%;
-  }
-}*/
 /*********************SOUPS*********************/
 .frenchOnion {
   background-image: url('../images/pics/soup/frenchOnion.jpg');
@@ -286,12 +284,143 @@ section#pizzaMenu {
 .imgText {
   text-align: center;
   margin: 0;
-  padding: 25px 0 0 0;
-  color: #ffffff;
+  padding: 0 auto;
+  color: #330303;
+  width: 100%;
+}
+.backSpan {
+  opacity: 0.8;
+  background-color: white;
 }
 section#pastaMenu ul li {
   display: inline-block;
 }
 /*********************************/
 /*************CONTACT*************/
+form {
+  background: #aaaaaa;
+  margin: 70px 0 0 350px;
+  height: 500px;
+  width: 600px;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.25em;
+  line-height: 24px;
+  font-weight: bold;
+  color: #09C;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  margin-bottom: 50px;
+}
+form h1 {
+  text-align: center;
+  text-decoration: underline;
+  color: #330303;
+}
+span.input {
+  font-size: 1.563em;
+  margin-top: 60px;
+  margin-bottom: -25px;
+  display: block;
+  color: #330303;
+}
+#name {
+  width: 300px;
+  float: right;
+}
+#email {
+  float: right;
+  width: 300px;
+}
+#subject {
+  float: right;
+  width: 300px;
+}
+#feedback {
+  float: right;
+  width: 300px;
+}
+#submit {
+  margin: 40px 0 0 235px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  background-color: #aaaaaa;
+  height: 100px;
+  width: 100px;
+}
 /**************/
+/*********MEDIA QUERIES*********/
+@media screen and (min-width: 768px) {
+  
+}
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 95%;
+  }
+  header .menuBtn {
+    float: left;
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    text-align: center;
+  }
+  header nav {
+    float: left;
+    display: inline-block;
+    width: 100%;
+    display: none;
+  }
+  header nav ul {
+    padding: 5px 0;
+  }
+  header nav ul:hover li {
+    display: block;
+  }
+  header nav ul li {
+    display: block;
+    padding: 0;
+    width: 20px;
+  }
+  header nav ul a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+  header#mainHeader h1 {
+    margin: 0 0 0 50px;
+    float: left;
+    width: 75%;
+    font-size: 2em;
+    line-height: 1.3em;
+    color: #aaaaaa;
+  }
+  section#about .content {
+    float: left;
+    display: inline-block;
+    width: 90%;
+    margin: 0 4.95%;
+  }
+  form {
+    margin: 70px 0 0 20px;
+    height: 500px;
+    width: 350px;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.25em;
+    line-height: 24px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  form h1 {
+    text-align: center;
+    text-decoration: none;
+    color: #330303;
+  }
+}
