@@ -3,14 +3,30 @@
 <head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 	<link rel="stylesheet" href="styles/reset.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="styles/main.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="styles/print.css" type="text/css" media="print" >
+
+	<script>
+
+	  $(document).ready(function(){
+	    $(".menuBtn").click(function(){
+	      $("nav").slideToggle();
+	    });
+ 	 });
+
+ 	</script>
 
 	<title>Menu at La Donna</title>
 
 </head>
 <body>
+
+	<div class="menuBtn"><img src="images/menu.svg"></div>
+
 	<nav id="mainNav">
 		<ul>
 			<li><a href="index.html">Home</a></li>
@@ -24,7 +40,7 @@
 		<ul id="pasta">
 			<li class="frenchOnion"><p class="imgText"><span class="backSpan">French Onion Soup - $5.95</span></p></li>
 			<li class="italWed"><p class="imgText"><span class="backSpan">Italian Wedding Soup - $4.99</span></p></li>
-			<li class="minestrone"><p class="imgText"><span class="backSpan">Minestroni - $3.99</span></p></li>
+			<li class="minestrone"><p class="imgText"><span class="backSpan">Minestrone - $3.99</span></p></li>
 			<li class="broccoli"><p class="imgText"><span class="backSpan">Cream of Broccoli - $4.29</span></p></li>
 		</ul>
 	</section>

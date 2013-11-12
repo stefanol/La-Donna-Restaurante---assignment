@@ -56,8 +56,6 @@ nav#mainNav {
   letter-spacing: 0.2em;
   font-family: Ariel;
   z-index: 9999;
-  /*****THANKS!!!******/
-
 }
 nav#mainNav ul {
   margin: 0 auto;
@@ -68,7 +66,7 @@ nav#mainNav ul li {
   padding: 0px 6%;
 }
 nav#mainNav ul li a:hover {
-  color: #aaaaaa;
+  color: #828282;
 }
 .menuBtn {
   display: none;
@@ -96,17 +94,17 @@ header#mainHeader h1 {
   width: 75%;
   font-size: 2em;
   line-height: 1.3em;
-  color: #aaaaaa;
+  color: #828282;
 }
 body {
-  background-color: grey;
+  background-color: #828282;
   font-family: Helvetica;
   font-size: 1em;
   color: #fff;
 }
 section#about {
   background: #330303;
-  color: #aaaaaa;
+  color: #828282;
   padding-top: 10px;
 }
 section#about .content {
@@ -128,19 +126,19 @@ section#about .content h2 {
 /*****************/
 /*******MENU******/
 section#soupMenu h2 {
-  font-size: 30px;
+  font-size: 1.875em;
   text-align: center;
   padding-top: 65px;
 }
 section#pastaMenu h2 {
-  font-size: 30px;
+  font-size: 1.875em;
   text-align: center;
 }
 section ul {
   padding: 35px;
 }
 section#pizzaMenu h2 {
-  font-size: 30px;
+  font-size: 1.875em;
   text-align: center;
   clear: both;
   padding-top: 20px;
@@ -298,7 +296,7 @@ section#pastaMenu ul li {
 /*********************************/
 /*************CONTACT*************/
 form {
-  background: #aaaaaa;
+  background: #aaa;
   margin: 70px 0 0 350px;
   height: 500px;
   width: 600px;
@@ -329,68 +327,161 @@ span.input {
   display: block;
   color: #330303;
 }
-#name {
+.field {
   width: 300px;
   float: right;
-}
-#email {
-  float: right;
-  width: 300px;
-}
-#subject {
-  float: right;
-  width: 300px;
-}
-#feedback {
-  float: right;
-  width: 300px;
 }
 #submit {
   margin: 40px 0 0 235px;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
-  background-color: #aaaaaa;
+  background-color: #828282;
   height: 100px;
   width: 100px;
 }
 /**************/
 /*********MEDIA QUERIES*********/
-@media screen and (min-width: 768px) {
-  
-}
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+  /********HOME PAGE********/
   .container {
     max-width: 95%;
+  }
+  nav {
+    display: none;
+  }
+  nav ul li {
+    width: 290px;
+    text-align: center;
+    line-height: 80px;
+  }
+  .menuBtn {
+    display: block;
+    margin: 5px 0 0 375px;
+  }
+  section#about .content {
+    width: 95%;
+    clear: both;
+  }
+  /*********************/
+  /********MENU*********/
+  section#soupMenu {
+    margin-left: 50px;
+  }
+  .frenchOnion {
+    opacity: 1.0;
+  }
+  .italWed {
+    opacity: 1.0;
+  }
+  .minestrone {
+    opacity: 1.0;
+  }
+  .broccoli {
+    opacity: 1.0;
+  }
+  section#pastaMenu {
+    margin-left: 50px;
+    clear: both;
+  }
+  .alfredo {
+    opacity: 1.0;
+  }
+  .penneVodka {
+    opacity: 1.0;
+  }
+  .lasagna {
+    opacity: 1.0;
+  }
+  .cannelloni {
+    opacity: 1.0;
+  }
+  section#pizzaMenu {
+    margin-left: 50px;
+  }
+  .fourCheese {
+    opacity: 1.0;
+  }
+  .margherita {
+    opacity: 1.0;
+  }
+  .meatLovers {
+    opacity: 1.0;
+  }
+  .vegetarian {
+    opacity: 1.0;
+  }
+  /***********************/
+  /*********CONTACT********/
+  form {
+    margin: 20px 0 0 130px;
+    height: 520px;
+    width: 500px;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.25em;
+    line-height: 1px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  form h1 {
+    text-align: center;
+    text-decoration: none;
+    color: #330303;
+  }
+  .input {
+    padding-bottom: 45px;
+    margin: 0 auto;
+  }
+  .field {
+    margin: 0 80px 0 120px;
+  }
+  #submit {
+    margin: 5px 0 0 0;
+    height: 85px;
+    width: 85px;
+  }
+}
+/************************/
+@media screen and (max-width: 480px) {
+  /********HOME PAGE***********/.container {
+    max-width: 95%;
+  }
+  nav {
+    display: none;
+  }
+  nav ul li {
+    width: 130px;
+    text-align: center;
+    line-height: 40px;
   }
   header .menuBtn {
     float: left;
     display: inline-block;
-    width: 100%;
+    width: 1%;
+    margin-left: 180px;
     height: 32px;
     text-align: center;
+    margin-top: 15px;
   }
-  header nav {
-    float: left;
-    display: inline-block;
-    width: 100%;
-    display: none;
-  }
-  header nav ul {
+  header ul {
     padding: 5px 0;
   }
-  header nav ul:hover li {
-    display: block;
+  header ul:hover li {
+    display: none;
   }
-  header nav ul li {
-    display: block;
-    padding: 0;
+  header ul li {
+    display: none;
+    padding: 30px;
     width: 20px;
   }
-  header nav ul a {
+  header ul a {
     display: block;
     width: 100%;
     text-align: center;
     padding: 20px 0;
+  }
+  .menuBtn {
+    display: block;
+    margin: 10px 0 0 190px;
   }
   header#mainHeader h1 {
     margin: 0 0 0 50px;
@@ -398,7 +489,7 @@ span.input {
     width: 75%;
     font-size: 2em;
     line-height: 1.3em;
-    color: #aaaaaa;
+    color: #828282;
   }
   section#about .content {
     float: left;
@@ -406,14 +497,62 @@ span.input {
     width: 90%;
     margin: 0 4.95%;
   }
+  /******************/
+  /*******MENU********/
+  section#soupMenu {
+    margin-left: 15px;
+  }
+  .frenchOnion {
+    opacity: 1.0;
+  }
+  .italWed {
+    opacity: 1.0;
+  }
+  .minestrone {
+    opacity: 1.0;
+  }
+  .broccoli {
+    opacity: 1.0;
+  }
+  section#pastaMenu {
+    margin-left: 15px;
+  }
+  .alfredo {
+    opacity: 1.0;
+  }
+  .penneVodka {
+    opacity: 1.0;
+  }
+  .lasagna {
+    opacity: 1.0;
+  }
+  .cannelloni {
+    opacity: 1.0;
+  }
+  section#pizzaMenu {
+    margin-left: 15px;
+  }
+  .fourCheese {
+    opacity: 1.0;
+  }
+  .margherita {
+    opacity: 1.0;
+  }
+  .meatLovers {
+    opacity: 1.0;
+  }
+  .vegetarian {
+    opacity: 1.0;
+  }
+  /********************/
+  /*********CONTACT*******/
   form {
-    margin: 70px 0 0 20px;
-    height: 500px;
+    margin: 20px 0 0 20px;
+    height: 520px;
     width: 350px;
     font-family: Helvetica, sans-serif;
     font-size: 1.25em;
-    line-height: 24px;
-    font-weight: bold;
+    line-height: 1px;
     display: inline-block;
     margin-bottom: 50px;
     text-align: center;
@@ -423,4 +562,16 @@ span.input {
     text-decoration: none;
     color: #330303;
   }
+  .input {
+    padding-bottom: 45px;
+  }
+  .field {
+    width: 150px;
+  }
+  #submit {
+    margin: 10px 0 0 0;
+    height: 75px;
+    width: 75px;
+  }
 }
+/*********************/

@@ -3,14 +3,31 @@
 <head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 	<link rel="stylesheet" href="styles/reset.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="styles/main.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="styles/print.css" type="text/css" media="print" >
+	<link rel="stylesheet" href="styles/print.css" type="text/css" media="print"/>
+
+	<script>
+
+	  $(document).ready(function(){
+	    $(".menuBtn").click(function(){
+	      $("nav").slideToggle();
+	    });
+  	});
+
+ 	</script>
 
 	<title>La Donna Contact Page</title>
 </head>
 
 <body>
+
+	<div class="menuBtn"><img src="images/menu.svg"></div>
+
+
 	<nav id="mainNav">
 		<ul>
 			<li><a href="index.html">Home</a></li>
@@ -24,22 +41,21 @@
 		<div>
 			<h1>Contact Us</h1>
 		
-			<span class="input">Your name</span><input id="name" type="text" placeholder="Stefano Lombardo" />
+			<span class="input">Your name</span><input class="field" type="text" placeholder="Stefano Lombardo" />
 
-			<span class="input">Email Address</span><input id="email" type="text" placeholder="lmbs0126@humbermail.ca" />
+			<span class="input">Email Address</span><input class="field" type="text" placeholder="lmbs0126@humbermail.ca" />
 
-			<span class="input">Subject</span><input id="subject" type="text" placeholder="Restaurant Assignment" />
+			<span class="input">Subject</span><input class="field" type="text" placeholder="Restaurant Assignment" />
 
-			<span class="input">Message</span><textarea id="feedback" type="text" placeholder="This assignment is great! Hooray for La Donna Ristorante!"></textarea>
+			<span class="input">Message</span><textarea class="field" type="text" placeholder="This assignment is great! Hooray for La Donna Ristorante!"></textarea>
 
-			<input id="submit" type="button" value="Submit Form" />
+			<input id="submit" type="button" value="Submit" />
 		</div>
 	</form>
 
 	<footer class="bottomFooter">
 		<div class="container">
-			<h4>Copyright La Donna Restaurante 2013</h4>
-			<!--ADD SOCIAL MEDIA-->
+			<h4>Copyright La Donna Ristorante 2013</h4>
 		</div>
 	</footer>
 </body>
